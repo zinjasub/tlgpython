@@ -1,0 +1,12 @@
+
+
+x = response.get(f"https://api.sportradar.us/mlb/trial/v7/en/games/{y}/{m}/{d}/boxscore.json?api_key=x865c2cmk588v462k2gjk42")
+
+x = x.json()
+
+for game in x["league"]["games"]:
+    print(game)
+
+
+# this allows a lookup of a team
+https://api.sportradar.us/mlb/{access_level}/{version}/en/teams/{team_id}/profile.{format}?api_key={your_api_key}
